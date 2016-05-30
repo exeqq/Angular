@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Obteniendo datos desde una DB usando Angular JS";
+}
+
+<div ng-controller="OrderController">
+    <h3 class="text-info">Listado de Ordenes</h3>
+    <div class="container">
+        <table class="table table-responsive table-bordered">
+            <thead>
+                <tr><th>ID</th><th>No.</th><th>Fecha</th><th>Descripción</th></tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="order in Order">
+                    <td>{{order.OrderID}}</td>
+                    <td>{{order.OrderNo}}</td>
+                    <td>{{order.OrderDate}}</td>
+                    <td>{{order.Description}}</td>
+                </tr>
+            </tbody>                       
+        </table>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/myscript2.js"></script>
+}
+
